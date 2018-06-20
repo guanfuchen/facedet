@@ -8,13 +8,14 @@ face detection algorithms
 ---
 ## 网络
 
-- FaceBoxes
+- FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)
 
 
 ---
 ## 数据
 
-- WIDER FACE
+- WIDER FACE，实现问题参考[wider_face_understanding](./doc/wider_face_understanding.md)
+- FDDB，实现问题可参考[fddb_understanding](./doc/fddb_understanding.md)
 
 
 ---

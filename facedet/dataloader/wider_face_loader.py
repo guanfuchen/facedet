@@ -65,10 +65,10 @@ class WiderFaceLoader(data.Dataset):
                 continue
             else:
                 pass
-                # 造成加载文件较慢
-                img = cv2.imread(image_name)
-                if img is None:
-                    continue
+                # # 造成加载文件较慢
+                # img = cv2.imread(image_name)
+                # if img is None:
+                #     continue
             self.files.append(image_name)
 
             face_num = int(bbox_lines[bbox_lines_id+1].strip())  # 图片中有多少人脸
@@ -105,16 +105,17 @@ class WiderFaceLoader(data.Dataset):
         labels = labels.clone()
 
         if self.split == 'train':
-            # img, boxes, labels = self.random_crop(img, boxes, labels)
+            img, boxes, labels = self.random_crop(img, boxes, labels)
             img = utils.random_bright(img)
             img, boxes = utils.random_flip(img, boxes)
+
+        img_h, img_w, img_c = img.shape
+        boxes /= torch.Tensor([img_h, img_w, img_h, img_w]).expand_as(boxes)
 
         img = cv2.resize(img, self.img_size)
 
         for transform_item in self.transform:
             img = transform_item(img)  # ToTensor将HxWxC转换为CxHxW
-
-        boxes /= torch.Tensor([1024.0, 1024.0, 1024.0, 1024.0]).expand_as(boxes)
 
 
         if self.boxcoder is not None:
@@ -125,12 +126,16 @@ class WiderFaceLoader(data.Dataset):
     def __len__(self):
         return len(self.files)
 
-    def random_getim(self):
+    def random_getimg(self):
         idx = random.randrange(0, self.__len__())
         fname = self.files[idx]
         img = cv2.imread(fname)
+
         boxes = self.boxes[idx]
+        boxes = torch.from_numpy(np.array(boxes, dtype=np.float32))
+
         labels = self.labels[idx]
+        labels = torch.from_numpy(np.array(labels, dtype=np.long))
 
         return img, boxes, labels
 
@@ -144,8 +149,9 @@ class WiderFaceLoader(data.Dataset):
                 boxwh = boxes_uniform[:, 2:] - boxes_uniform[:, :2]
                 mask = (boxwh[:, 0] > self.small_threshold) & (boxwh[:, 1] > self.small_threshold)
                 if not mask.any():
+                    # 所有的bounding box都小于阈值
                     print('default image have none box bigger than small_threshold')
-                    im, boxes, labels = self.random_getim()
+                    im, boxes, labels = self.random_getimg()
                     imh, imw, _ = im.shape
                     short_size = min(imw, imh)
                     continue
@@ -154,6 +160,7 @@ class WiderFaceLoader(data.Dataset):
                 return im, selected_boxes, selected_labels
 
             for _ in range(10):
+                # 随机选择较小的宽度，随机选择ROI
                 w = random.randrange(int(0.3 * short_size), short_size)
                 h = w
 
@@ -165,11 +172,13 @@ class WiderFaceLoader(data.Dataset):
                 roi2 = roi.expand(len(center), 4)
                 mask = (center > roi2[:, :2]) & (center < roi2[:, 2:])
                 mask = mask[:, 0] & mask[:, 1]
+                # 其中ROI必须存在标注为目标的中心
                 if not mask.any():
                     continue
 
                 selected_boxes = boxes.index_select(0, mask.nonzero().squeeze(1))
                 img = im[y:y + h, x:x + w, :]
+                # crop以后坐标系统中的bounding box都进行了变化
                 selected_boxes[:, 0].add_(-x).clamp_(min=0, max=w)
                 selected_boxes[:, 1].add_(-y).clamp_(min=0, max=h)
                 selected_boxes[:, 2].add_(-x).clamp_(min=0, max=w)
@@ -179,9 +188,11 @@ class WiderFaceLoader(data.Dataset):
                 boxes_uniform = selected_boxes / torch.Tensor([w, h, w, h]).expand_as(selected_boxes)
                 boxwh = boxes_uniform[:, 2:] - boxes_uniform[:, :2]
                 mask = (boxwh[:, 0] > self.small_threshold) & (boxwh[:, 1] > self.small_threshold)
+
+                # after crop图像中的人脸bounding box仍然太小
                 if not mask.any():
                     print('crop image have none box bigger than small_threshold')
-                    im, boxes, labels = self.random_getim()
+                    im, boxes, labels = self.random_getimg()
                     imh, imw, _ = im.shape
                     short_size = min(imw, imh)
                     continue

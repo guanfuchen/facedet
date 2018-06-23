@@ -26,7 +26,7 @@ def train():
     train_dataloader = data.DataLoader(train_dataset, batch_size=1, shuffle=True)
 
     # optimizer = optim.SGD(net.parameters(), lr=1e-5, momentum=0.9, weight_decay=5e-4)
-    optimizer = optim.Adam(net.parameters(), lr=1e-5, weight_decay=1e-4)
+    optimizer = optim.Adam(net.parameters(), lr=1e-4, weight_decay=1e-4)
     criterion = facebox.FaceBoxLoss(num_classes=num_classses)
 
     for epoch in range(100):
@@ -95,8 +95,6 @@ def train():
             os.mkdir('weight')
         print('saving model ...')
         torch.save(net.state_dict(),'weight/facebox.pt')
-
-
 
 
 if __name__ == '__main__':

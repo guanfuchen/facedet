@@ -4,6 +4,8 @@ FDDB数据集主要从yahoo新闻网站中采集的相关人脸（椭圆形标�
 
 但是这里的数据集标注形状是椭圆型，需要转换为长方形的bounding box标注形状，这里参考[fddbToSigset.py](https://github.com/biometrics/openbr/blob/master/data/FDDB/fddbToSigset.py)。
 
+也正是因为这里是椭圆形的标注，常常用来评估人脸检测器的性能，可以使用cross validation的ROC曲线和其他人脸检测算法比较性能。
+
 ---
 ## 数据集结构
 

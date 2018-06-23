@@ -96,10 +96,10 @@ class FaceBoxCoder:
         boxes = torch.cat([cxcy - wh / 2, cxcy + wh / 2], 1)  # [21824,4]
 
         max_conf, labels = conf.max(1)  # [21842,1]
-        print('labels', labels.long().sum())
 
         # 无人脸
-        if labels.long().sum() is 0:
+        if labels.long().sum() == 0:
+            print('labels', labels.long().sum())
             sconf, slabel = conf.max(0)
             max_conf[slabel[0:5]] = sconf[0:5]
             labels[slabel[0:5]] = 1

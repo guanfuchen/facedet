@@ -50,6 +50,12 @@ python validate.py
 python test.py
 ```
 
+**demo**
+```bash
+# 读取摄像头实时检测人脸
+python demo.py
+```
+
 ---
 ## 依赖
 

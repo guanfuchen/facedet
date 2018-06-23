@@ -27,12 +27,12 @@ def test():
     for epoch in range(1):
 
         for train_id, (images, loc_targets, conf_targets) in enumerate(train_dataloader):
-            images = Variable(images)
-            # images = cv2.imread('obama.jpg')
-            # images = cv2.resize(images, (1024, 1024))
-            # images = torch.from_numpy(images.transpose((2, 0, 1)))
-            # images = images.float().div(255)
-            # images = Variable(torch.unsqueeze(images, 0), volatile=True)
+            # images = Variable(images)
+            images_np = cv2.imread('obama.jpg')
+            images = cv2.resize(images_np, (1024, 1024))
+            images = torch.from_numpy(images.transpose((2, 0, 1)))
+            images = images.float().div(255)
+            images = Variable(torch.unsqueeze(images, 0), volatile=True)
 
             loc_preds, conf_preds = net(images)
 
@@ -45,7 +45,7 @@ def test():
             # image_np = images[0, :, :, :].data.numpy()
             # image_np = image_np.transpose((1, 2, 0))
             # print(image_np.dtype)
-            # print(image_np.shape)
+            print(images_np.shape)
             # cv2.imshow('img', image_np)
             # cv2.waitKey()
 
@@ -54,6 +54,18 @@ def test():
             print('boxes:{}'.format(boxes))
             print('labels:{}'.format(labels))
             print('probs:{}'.format(probs))
+
+            img_h, img_w, img_c = images_np.shape
+            for box in boxes:
+                box_x1 = box[0] * img_w
+                box_y1 = box[1] * img_h
+                box_x2 = box[2] * img_w
+                box_y2 = box[3] * img_h
+                print('({},{})->({},{})'.format(box_x1, box_y1, box_x2, box_y2))
+                cv2.rectangle(images_np, (box_x1, box_y1), (box_x2, box_y2), (255, 0, 0))
+
+            cv2.imshow('images_np', images_np)
+            cv2.waitKey()
 
             print('loc_preds.size():{}'.format(loc_preds.size()))
             print('conf_preds.size():{}'.format(conf_preds.size()))

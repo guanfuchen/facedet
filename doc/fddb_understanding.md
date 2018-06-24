@@ -24,3 +24,4 @@ FDDB_ROOT/FDDB-folds/FDDB-fold-01-ellipseList.txt，FDDB_ROOT/FDDB-folds/FDDB-fo
 
 - [Face Detection Data Set and Benchmark Home](http://vis-www.cs.umass.edu/fddb/) FDDB数据集主页。
 - FDDB: A Benchmark for Face Detection in Unconstrained Settings，对应论文。
+- [FDDB人脸检测算法评价标准](https://yinguobing.com/fddb/)

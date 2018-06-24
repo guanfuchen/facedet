@@ -14,6 +14,10 @@ face detection algorithms
 ---
 ## 数据
 
+人脸检测数据集可参考[Face Detection Dataset](https://xuchong.github.io/dataset/facedetection/2016/08/22/face-detetion-dataset.html) 其中主要有WIDER FACE，IJBA-A，MALF，FDDB和AFW数据集。
+
+详细数据集相关实现问题参考[facedet_dataset_understanding](./doc/facedet_dataset_understanding.md)
+
 - WIDER FACE，实现问题参考[wider_face_understanding](./doc/wider_face_understanding.md)
 - FDDB，实现问题可参考[fddb_understanding](./doc/fddb_understanding.md)
 

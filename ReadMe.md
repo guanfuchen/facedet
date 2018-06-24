@@ -20,6 +20,7 @@ face detection algorithms
 
 - WIDER FACE，实现问题参考[wider_face_understanding](./doc/wider_face_understanding.md)
 - FDDB，实现问题可参考[fddb_understanding](./doc/fddb_understanding.md)
+- ALFW，实现问题可参考[alfw_understanding](./doc/alfw_understanding.md)
 
 
 ---

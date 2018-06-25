@@ -8,7 +8,9 @@ face detection algorithms
 ---
 ## 网络
 
-- FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)
+- FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)，已实现
+- CascadeCNN，实现问题参考[cascadeface_understanding](./doc/cascadeface_understanding.md)，未实现
+- MTCNN，实现问题参考[mtcnn_understanding](./doc/mtcnn_understanding.md)
 
 
 ---

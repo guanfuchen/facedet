@@ -29,3 +29,4 @@ torch.stack(temp, dim=0)
 - [dbt_face_detection.cpp](https://github.com/opencv/opencv/blob/master/samples/cpp/dbt_face_detection.cpp) 基于OpenCV实现的VJ人脸检测算法。
 - A Convolutional Neural Network Cascade for Face Detection实现级联CNN网络人脸检测架构，参考代码[fast_face_detector](https://github.com/IggyShone/fast_face_detector)，[A-Convolutional-Neural-Network-Cascade-for-Face-Detection](https://github.com/mks0601/A-Convolutional-Neural-Network-Cascade-for-Face-Detection)。
 - [dface](https://gitee.com/kuaikuaikim/dface) dface的pytorch实现，其中对MTCNN进行了重新实现，大量参考其中的实现代码，训练机制。
+- [HelloFace](https://github.com/becauseofAI/HelloFace) 该仓库收集了常用的face detection论文。

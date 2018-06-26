@@ -10,7 +10,8 @@ face detection algorithms
 
 - FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)，已实现
 - CascadeCNN，实现问题参考[cascadeface_understanding](./doc/cascadeface_understanding.md)，未实现
-- MTCNN，实现问题参考[mtcnn_understanding](./doc/mtcnn_understanding.md)
+- MTCNN，实现问题参考[mtcnn_understanding](./doc/mtcnn_understanding.md)，未实现。
+- S3FD，实现问题可参考[s3fd_understanding](./doc/s3d_understanding.md)，未实现。
 
 
 ---
@@ -22,7 +23,8 @@ face detection algorithms
 
 - WIDER FACE，实现问题参考[wider_face_understanding](./doc/wider_face_understanding.md)
 - FDDB，实现问题可参考[fddb_understanding](./doc/fddb_understanding.md)
-- ALFW，实现问题可参考[alfw_understanding](./doc/alfw_understanding.md)
+- AFLW，实现问题可参考[aflw_understanding](./doc/aflw_understanding.md)
+- CelebA，大尺度CelebFaces属性，实现问题可参考[celeba_understanding](./doc/celeba_understanding.md)
 
 
 ---

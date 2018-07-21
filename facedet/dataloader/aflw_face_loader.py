@@ -11,7 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-from sqlalchemy import create_engine, MetaData
+# from sqlalchemy import create_engine, MetaData
 
 
 from facedet.modelloader import facebox, utils

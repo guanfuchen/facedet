@@ -12,6 +12,7 @@ face detection algorithms
 - CascadeCNN，实现问题参考[cascadeface_understanding](./doc/cascadeface_understanding.md)，未实现
 - MTCNN，实现问题参考[mtcnn_understanding](./doc/mtcnn_understanding.md)，未实现。
 - S3FD，实现问题可参考[s3fd_understanding](./doc/s3d_understanding.md)，未实现。
+- Faster RCNN，参考技术报告[Face Detection with the Faster R-CNN](https://arxiv.org/abs/1606.03473)，和对应源代码[face-py-faster-rcnn](https://github.com/playerkk/face-py-faster-rcnn)。
 
 
 ---

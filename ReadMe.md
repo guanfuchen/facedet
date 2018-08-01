@@ -9,6 +9,7 @@ face detection algorithms
 ## 人脸识别
 
 - [MobileFace](https://github.com/becauseofAI/MobileFace)
+- [facenet_caffe](https://github.com/lippman1125/facenet_caffe)
 
 ---
 ## 网络
@@ -18,6 +19,7 @@ face detection algorithms
 - MTCNN，实现问题参考[mtcnn_understanding](./doc/mtcnn_understanding.md)，未实现。
 - S3FD，实现问题可参考[s3fd_understanding](./doc/s3d_understanding.md)，未实现。
 - Faster RCNN，参考技术报告[Face Detection with the Faster R-CNN](https://arxiv.org/abs/1606.03473)，和对应源代码[face-py-faster-rcnn](https://github.com/playerkk/face-py-faster-rcnn)。
+- SSH，实现代码可参考[SSH](https://github.com/mahyarnajibi/SSH)。
 
 
 ---

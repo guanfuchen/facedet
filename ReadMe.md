@@ -33,6 +33,7 @@ face detection algorithms
 - FDDB，实现问题可参考[fddb_understanding](./doc/fddb_understanding.md)
 - AFLW，实现问题可参考[aflw_understanding](./doc/aflw_understanding.md)
 - CelebA，大尺度CelebFaces属性，实现问题可参考[celeba_understanding](./doc/celeba_understanding.md)
+- IMDb-Face，IMBb人脸噪声数据，可查看[IMDb-Face](https://github.com/fwang91/IMDb-Face)
 
 
 ---

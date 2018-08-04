@@ -6,6 +6,12 @@ face detection algorithms
 - [faceboxes](https://github.com/lxg2015/faceboxes) 使用multi scale one shot的CNN网络实现人脸检测。
 
 ---
+## 人脸识别
+
+- [MobileFace](https://github.com/becauseofAI/MobileFace)
+- [facenet_caffe](https://github.com/lippman1125/facenet_caffe)
+
+---
 ## 网络
 
 - FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)，已实现
@@ -13,6 +19,7 @@ face detection algorithms
 - MTCNN，实现问题参考[mtcnn_understanding](./doc/mtcnn_understanding.md)，未实现。
 - S3FD，实现问题可参考[s3fd_understanding](./doc/s3d_understanding.md)，未实现。
 - Faster RCNN，参考技术报告[Face Detection with the Faster R-CNN](https://arxiv.org/abs/1606.03473)，和对应源代码[face-py-faster-rcnn](https://github.com/playerkk/face-py-faster-rcnn)。
+- SSH，实现代码可参考[SSH](https://github.com/mahyarnajibi/SSH)。
 
 
 ---
@@ -26,6 +33,7 @@ face detection algorithms
 - FDDB，实现问题可参考[fddb_understanding](./doc/fddb_understanding.md)
 - AFLW，实现问题可参考[aflw_understanding](./doc/aflw_understanding.md)
 - CelebA，大尺度CelebFaces属性，实现问题可参考[celeba_understanding](./doc/celeba_understanding.md)
+- IMDb-Face，IMBb人脸噪声数据，可查看[IMDb-Face](https://github.com/fwang91/IMDb-Face)
 
 
 ---

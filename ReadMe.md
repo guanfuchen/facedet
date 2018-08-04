@@ -6,11 +6,6 @@ face detection algorithms
 - [faceboxes](https://github.com/lxg2015/faceboxes) 使用multi scale one shot的CNN网络实现人脸检测。
 
 ---
-## 人脸识别
-
-- [MobileFace](https://github.com/becauseofAI/MobileFace)
-
----
 ## 网络
 
 - FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)，已实现

@@ -10,7 +10,7 @@
 - 已完成AFLW数据集加载，但是加载较慢，下一步进行优化加载速度 TODO。
 - 重新阅读人脸检测算法VJ同时总结实现，可参考[浅析人脸检测之Haar分类器方法](http://www.cnblogs.com/ello/archive/2012/04/28/2475419.htm) TODO。
 - [Face detection with OpenCV and deep learning](https://www.pyimagesearch.com/2018/02/26/face-detection-with-opencv-and-deep-learning/) opencv中实现了ssd用来检测人脸，查看相应的caffe源码。
-- [sfd.pytorch](https://github.com/louis-she/sfd.pytorch) S3FD: single shot face detector in pytorch TODO
+- [sfd.pytorch](https://github.com/louis-she/sfd.pytorch) S3FD: single shot face detector in pytorch **TODO**，基于S3FD完成人脸检测。
 - [face-py-faster-rcnn](https://github.com/playerkk/face-py-faster-rcnn) 实现face faster rcnn模型 TODO。
 
 

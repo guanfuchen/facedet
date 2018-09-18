@@ -12,6 +12,12 @@ face detection algorithms
 - [facenet_caffe](https://github.com/lippman1125/facenet_caffe)
 
 ---
+## 行人检测
+
+- [Is Faster R-CNN Doing Well for Pedestrian Detection?](https://arxiv.org/abs/1607.07032)
+- [CityPersons: A Diverse Dataset for Pedestrian Detection](https://arxiv.org/abs/1702.05693)
+
+---
 ## 网络
 
 - FaceBoxes，实现问题参考[facebox_understanding](./doc/facebox_understanding.md)，已实现

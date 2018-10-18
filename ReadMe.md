@@ -4,6 +4,7 @@ face detection algorithms
 
 这个仓库旨在实现常用的人脸检测算法，主要参考如下：
 - [faceboxes](https://github.com/lxg2015/faceboxes) 使用multi scale one shot的CNN网络实现人脸检测。
+- [face_classification](https://github.com/oarriaga/face_classification)，实时的人脸检测（OpenCV）和分类（情感和性别）。
 
 ---
 ## 人脸识别
@@ -16,6 +17,7 @@ face detection algorithms
 
 - [Is Faster R-CNN Doing Well for Pedestrian Detection?](https://arxiv.org/abs/1607.07032)
 - [CityPersons: A Diverse Dataset for Pedestrian Detection](https://arxiv.org/abs/1702.05693)
+- Learning Efficient Single-stage Pedestrian Detectors by Asymptotic Localization Fitting，行人检测
 
 ---
 ## 网络

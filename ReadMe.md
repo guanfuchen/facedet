@@ -2,15 +2,32 @@
 
 face detection algorithms
 
+---
+## 公告
+
+避免大家花费时间去折腾，说明如下，目前该仓库主要还是将[faceboxes](https://github.com/lxg2015/faceboxes)阅读修改，基本跑通但是性能等还未系统测试，大家可以直接参考作者实现。下一步将最近阅读的人脸检测框架尝试统一实现并能获得较好的性能，整体实现思路尝试我写的语义分割框架[semseg](https://github.com/guanfuchen/semseg)的完善思路，有想法的可以一起来学习实现。
+
+---
+## Announcement
+Avoid everyone spending time to toss, as explained below, the current warehouse is still mainly [faceboxes](https://github.com/lxg2015/faceboxes) read and modify, basically run through but performance has not been systematically tested, you can directly refer to The author realizes that the next step is to try to implement the face detection framework recently and achieve better performance. Try the perfect idea of the semantic segmentation framework [semseg](https://github.com/guanfuchen/semseg), and have ideas. Can be learned together to achieve.
+
+---
+## 概述
 这个仓库旨在实现常用的人脸检测算法，主要参考如下：
 - [faceboxes](https://github.com/lxg2015/faceboxes) 使用multi scale one shot的CNN网络实现人脸检测。
 - [face_classification](https://github.com/oarriaga/face_classification)，实时的人脸检测（OpenCV）和分类（情感和性别）。
+- [Face-Resources](https://github.com/betars/Face-Resources)，其中有相关人脸模型和数据集资源。
+- [awesome-face](https://github.com/polarisZhao/awesome-face)，整理过的人脸检测论文和数据集。
+- [mxnet-face](https://github.com/tornadomeet/mxnet-face)，常用的face相关论文的mxnet实现。
 
 ---
 ## 人脸识别
 
 - [MobileFace](https://github.com/becauseofAI/MobileFace)
 - [facenet_caffe](https://github.com/lippman1125/facenet_caffe)
+- [Person_reID_baseline_pytorch](https://github.com/layumi/Person_reID_baseline_pytorch)，使用pytorch实现的经典reid模型。
+- [deep-person-reid](https://github.com/KaiyangZhou/deep-person-reid)
+- [Face Alignment in Full Pose Range: A 3D Total Solution](http://cvlab.cse.msu.edu/pdfs/Xiangyu_PAMI16.pdf)
 
 ---
 ## 行人检测

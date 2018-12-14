@@ -12,6 +12,7 @@
 - [mtcnn-caffe](https://github.com/CongWeilin/mtcnn-caffe)
 - [dface](https://gitee.com/kuaikuaikim/dface) 基本参考这个仓库。
 - [Large-scale CelebFaces Attributes (CelebA) Dataset](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) CelebA数据集，人脸alignment数据集。
+- [mtcnn-pytorch](https://github.com/TropComplique/mtcnn-pytorch)以及[mtcnn-pytorch](https://github.com/polarisZhao/mtcnn-pytorch)，提供了人脸检测测试pytorch实现。
 
 ---
 ## 网络架构
